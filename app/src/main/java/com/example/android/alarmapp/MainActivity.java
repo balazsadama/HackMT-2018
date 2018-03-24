@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +14,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_layout);
+
+        // Add items
+        final ArrayList<Item> items = new ArrayList<Item>();
+        items.add(new Item("reggeli", 10));
+        items.add(new Item("zuhanyzas", 25));
+/*        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));
+        items.add(new Item("random", 7));*/
+
+        ItemAdapter itemAdapter = new s(this, items);
+        System.out.println("itt");
+        ListView listView = (ListView)findViewById(R.id.list);
+        listView.setAdapter(itemAdapter);
+        // add on click listener here
     }
 
     @Override
