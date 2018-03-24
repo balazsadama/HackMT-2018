@@ -1,4 +1,8 @@
 proba szoveg
 gyorgy
 adam ugyes
+<<<<<<< HEAD
 adam nagyon ugyes <3
+=======
+nandi
+>>>>>>> aa978eab2e7845c4cadec8f9571ff880b803d427
